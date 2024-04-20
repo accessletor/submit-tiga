@@ -7,6 +7,9 @@
   .fav-cards {
     grid-template-columns: repeat(2, 1fr);
   }
+  .input-container{
+    grid-template-columns: repeat(2, 1fr);
+  }
    .contact-map,
   .contact-form {
     flex: 50%;
@@ -68,6 +71,9 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
   .fav-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .input-container{
     grid-template-columns: repeat(3, 1fr);
   }
 }

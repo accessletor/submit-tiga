@@ -2,16 +2,28 @@ import restoCard from '../../templates/resto-card';
 
 class FavoriteRestoView {
   getTemplate() {
+  //   return `
+  //   <div class="content">
+  //   <input id="query" type="text">
+  //   <h2 class="content__heading">Your Liked resto</h2>
+
+    //     <div id="resto" class="resto">
+    //     </div>
+
+    // </div>
+    //   `;
     return `
-    <div class="content">
-    <input id="query" type="text">
-    <h2 class="content__heading">Your Liked resto</h2>
-
-
-      <div id="resto" class="resto">
+    <section class="container">
+    <div class="form__group">
+    <input type="text" class="form__field w-100" id="query" placeholder="Cari Resto">
+    <label for="name" class="form__label"> Cari Resto </label>
+</div>
+      <div tabindex="0" class="container-title">
+        <h2>Favorite Restaurant</h2>
       </div>
-    
-  </div>
+      <p class="pesan-favorite">Tidak ada Restoran Favorit yang tersimpan. Tambahkan satu dengan mengklik tombol hati di halaman detail</p>
+      <div id="resto" class="fav-cards resto"></div>
+    </section>
     `;
   }
 
@@ -58,13 +70,14 @@ class FavoriteRestoView {
       html = this._getEmptyRestoTemplate();
     }
     document.getElementById('resto').innerHTML = html;
+
     document.getElementById('resto').dispatchEvent(new Event('resto:updated'));
   }
 
   _getEmptyRestoTemplate() {
     return `
       <div class="card__not__found">
-        Tidak ada restaurant untuk ditampilkan
+        restoran tidak ditemukan di menu favorite
       </div>
     `;
   }

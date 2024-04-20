@@ -27,7 +27,7 @@ const restoCard = (resto) => `
         <img src="${CONFIG.BASE_IMAGE_URL + resto.pictureId}" alt="${resto.name || '-'}">
     </div>
     <div class="text" tabindex="0">
-        <p class="title-city resto__title"><a href="#/resto/${resto.id || '-'}">${resto.name || '-'}</a></p>
+        <p class="title-city resto__title">${resto.name || '-'}</p>
         <p class="description">${resto.description || '-'}</p>
     </div>
     <a href="#/resto/${resto.id || '-'}" class="detail"><div tabindex="0">
