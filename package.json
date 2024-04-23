@@ -13,7 +13,7 @@
     "e2e": "codeceptjs run --steps"
   },
   "keywords": [],
-  "author": "your_name <your.email@domain.com>",
+  "author": "Asep Saefuddin saefuddinasep@yahoo.com",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.22.9",

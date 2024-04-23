@@ -1,5 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
-const FileLoader = require('file-loader');
+// const FileLoader = require('file-loader');
 
 const { merge } = require('webpack-merge');
 const common = require('./webpack.common');
@@ -21,18 +21,18 @@ module.exports = merge(common, {
           },
         ],
       },
-      {
-        test: /\.(png|jpe?g|gif)$/i,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: 'images',
-            },
-          },
-        ],
-      },
+      // {
+      //   test: /\.(png|jpe?g|gif)$/i,
+      //   use: [
+      //     {
+      //       loader: 'file-loader',
+      //       options: {
+      //         name: '[name].[ext]',
+      //         outputPath: 'images',
+      //       },
+      //     },
+      //   ],
+      // },
     ],
   },
 });
