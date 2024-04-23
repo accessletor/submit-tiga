@@ -9,7 +9,8 @@ const readdirSync = fs.readdirSync;
 const resolve = path.resolve;
 
 const target = resolve(__dirname, 'src/public/images');
-const destination = resolve(__dirname, 'src/public/images-responsive');
+// const destination = resolve(__dirname, 'src/public/images-responsive');
+const destination = resolve(__dirname, 'dist/images');
 
 if (!existsSync(destination)) {
   mkdirSync(destination);
