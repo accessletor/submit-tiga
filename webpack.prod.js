@@ -1,4 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
+const FileLoader = require('file-loader');
+
 const { merge } = require('webpack-merge');
 const common = require('./webpack.common');
 
@@ -15,6 +17,18 @@ module.exports = merge(common, {
             loader: 'babel-loader',
             options: {
               presets: ['@babel/preset-env'],
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'images',
             },
           },
         ],

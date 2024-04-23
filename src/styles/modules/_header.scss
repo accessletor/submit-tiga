@@ -7,7 +7,13 @@ header {
   .jumbotron {
 	font-size: 20px;
 	padding-top: 200px;
-	background-image: url(../public/images/heros/hero-image_4.jpg);
+	background-image: url(../public/images/hero-image_4.jpg);
+	// background-image:
+    //     image-set(
+    //         url('./images/hero-image_4-small.jpg') 480w,
+    //         url('./images/hero-image_4-large.jpg') 800w,
+    //         url('./images/hero-image_4.jpg') 1420w,
+    //     );
 	background-size: cover;
 	text-align: center;
 	color: $light-color;

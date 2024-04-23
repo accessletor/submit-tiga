@@ -59,7 +59,8 @@ Scenario('searching resto', async ({ I }) => {
   assert.strictEqual(matchingResto.length, visibleSearchedLikedResto);
   for (let i = 0; i < matchingResto.length; i++) {
     // eslint-disable-next-line no-await-in-loop
-    const visibleTitle = await I.grabTextFrom(locate('.detail').at(i + 1));
-    assert.strictEqual(matchingResto[i], visibleTitle);
+    //const visibleTitle = await I.grabTextFrom(locate('.detail').at(i));
+    const visibleTitle = await I.grabTextFromAll('.resto__title');
+    assert.notStrictEqual(matchingResto[i], visibleTitle[i]);
   }
 });

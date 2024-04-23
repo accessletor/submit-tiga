@@ -21,7 +21,10 @@ const generateReviewList = (reviews) => reviews.map((review) => `
 const restoDetail = (resto) => `
   <div class="detail">
     <div tabindex="0" class="img-container">
-      <img class="detail-img" alt="${resto.name}" src="${CONFIG.BASE_IMAGE_URL + resto.pictureId}"/>
+    <picture>
+        <source media="(max-width: 600px)" srcset="${CONFIG.BASE_IMAGE_URL_SMALL + resto.pictureId}">
+        <img class="detail-img" alt="${resto.name}" src="${CONFIG.BASE_IMAGE_URL + resto.pictureId}"/>
+        </picture>
     </div>
     <div class="info">
       <h3 tabindex="0" class="nama-resto">🏦${resto.name}</h3>
