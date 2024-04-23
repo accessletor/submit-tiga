@@ -15,7 +15,7 @@
     flex: 50%;
   }
   .jumbotron {
-    background-image: url('./images/hero-image_4-small.jpg');
+    background-image: url('../public/images-responsive/hero-image_4-small.jpg');
   }
 }
 
@@ -30,7 +30,7 @@
     display: none;
   }
   .jumbotron {
-    background-image: url('./images/hero-image_4-large.jpg');
+    background-image: url('../public/images-responsive/hero-image_4-large.jpg');
   }
 
   nav {

@@ -57,10 +57,6 @@ module.exports = {
             ignore: ['**/images/**'], // CopyWebpackPlugin mengabaikan berkas yang berada di dalam folder images (sharp)
           },
         },
-        {
-          from: path.resolve(__dirname, 'src/public/images/'), // Path ke folder gambar di dalam src
-          to: path.resolve(__dirname, 'dist/images/'), // Path ke folder gambar di dalam dist
-        },
       ],
     }),
     new WorkboxWebpackPlugin.GenerateSW({
